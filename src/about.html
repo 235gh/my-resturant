@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+       <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Swiper CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<!-- SwiperJS + Config -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+</head>
+<body>
+     <header class="about-header
+    relative bg-[#0e1730] p-30  md:flex md:flex-col md:items-center py-4  md:h-screen">
+      <div>
+        <!-- Logo -->
+        <img
+          src="./image/logo.png"
+          alt="Logo"
+          class="md:mb-3 md:mt-0 w-52 md:w-60"
+        />
+        <!-- Hamburger icon -->
+        <label
+          for="menu"
+          class="md:hidden cursor-pointer text-white absolute top-4 right-4 z-50"
+          aria-label="navigation Toggle"
+        >
+          <div class="w-6 h-0.5 bg-white"></div>
+          <div class="w-6 h-0.5 bg-white my-1"></div>
+          <div class="w-6 h-0.5 bg-white"></div>
+        </label>
+      </div>
+
+      <!-- Navbar -->
+      <nav class="relative w-full md:mb-2">
+        <!-- Checkbox toggle -->
+        <input
+          type="checkbox"
+          name="checkb"
+          class="hidden"
+          id="menu"
+          title="navigation Toggle"
+        />
+        <!-- logo for menu -->
+       
+        <!-- Menu -->
+        <ul class="md:flex  md:space-x-6 text-black md:text-white font-bold md:justify-center md:gap-11">
+          <div>
+         <img
+           src="./image/logo-lg-darker.png"
+           alt="Logo"
+           class="w-52 mb-2 md:hidden"
+         />
+       </div>
+          <li class=" py-2 px-2 hover:text-slate-500"><a href="../index.html">HomePage</a></li>
+          <li class=" py-2 px-2  hover:text-slate-500"><a href="menu.html">Menu</a></li>
+          <li class="relative group ">
+            <button
+            id="pages-toggle"
+             class="flex justify-between w-full py-2 px-2 items-center  hover:text-slate-500">
+              Page
+              <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+            </button>
+            <ul
+              id="pages-dropdown"
+              class="absolute text-black left-0 hidden  bg-white shadow-xl opacity-65 rounded-md top-full w-40 z-10"
+            >
+              <li>
+                <a href="#" class="block px-4 py-2  hover:bg-slate-500 "
+                  >About Us</a
+                >
+              </li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Contact Page</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Our Chefs</a></li>
+              <li>
+                <a href="#" class="block px-4 py-2 hover:bg-slate-500">Login</a>
+              </li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Sign Up</a></li>
+            </ul>
+             <ul
+               class="absolute text-black left-0 hidden bg-white shadow-xl opacity-65 rounded-md top-full w-40 z-10 md:group-hover:block"
+                >
+                 <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">About Us</a></li>
+                 <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Our Chefs</a></li>
+                 <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Login</a></li>
+                 <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Sign Up</a></li>
+              </ul>
+            </l>
+          <li class=" py-2 px-2  hover:text-slate-500"><a href="#">Contact</a></li>
+        </ul>
+       </div>
+      </nav>
+         <section>
+        <h4 class="font-san text-center text-4xl mt-7   text-white  md:text-8xl md:mt-40">ABOUT US</h4>
+      </section>
+    </header>
+   <main>
+  <!-- Welcome / About Section -->
+  <!-- About Section -->
+<section class="bg-[#0e1730] py-20 md:h-screen">
+  <div class="container mx-auto px-6 lg:px-20">
+    <div class="grid lg:grid-cols-2  gap-20 items-center">
+      
+      <!-- Left: Text -->
+      <div>
+        <h3 class="text-xl italic text-gray-500">Welcome to</h3>
+        <h1 class="text-4xl font-bold text-white">SAVORIQ Restaurant</h1>
+        <p class="mt-6 text-gray-600 leading-relaxed">
+          🌿 Founded on passion, flavor, and tradition, <span class="font-semibold">SAVORIQ Restaurant</span> blends timeless recipes with modern creativity. 
+          Our chefs work closely with local farmers, artisans, and winemakers to bring only the freshest ingredients to your table.
+        </p>
+        <p class="mt-4 text-gray-600 leading-relaxed">
+          Every plate is a story of authenticity, every sip a toast to excellence. More than a restaurant, SAVORIQ is a gathering place where community, laughter, and flavor live in harmony.
+        </p>
+        <a href="about.html" class="inline-block mt-6 bg-[#c9a581] text-white px-6 py-3 rounded-lg shadow-md hover:bg-[#a8865b] transition">
+          Read More
+        </a>
+      </div>
+
+      <!-- Right: Stacked Images -->
+      <div class="relative">
+        <!-- Top Image -->
+        <img src="./image/welcome_1.jpg" alt="Restaurant Image" 
+             class="w-80 h-52 object-cover rounded-xl shadow-lg mx-auto lg:mx-0">
+        <!-- Bottom Image (overlap) -->
+        <img src="./image/welcome_2.jpg" alt="Restaurant Image" 
+             class="w-72 h-48 object-cover rounded-xl shadow-lg absolute -bottom-10 right-10 border-4 border-white">
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Our Team Section -->
+  <section class="bg-[#0e1730] py-20 md:h-screen">
+    <div class="container mx-auto px-6 lg:px-20">
+      <!-- Section Title -->
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold text-white">Meet Our <span class="text-[#c9a581]">Team</span></h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto">
+          Our chefs and staff are passionate about crafting unforgettable dining experiences.
+        </p>
+      </div>
+
+      <!-- Team Grid -->
+      <div class="md:flex gap-16 md:justify-center md:items-center">
+        <!-- Team Member -->
+        <div class="group bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+          <div class="relative">
+            <img src="./image/chef-1.jpg" alt="Chef 1" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            <!-- Overlay -->
+            <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center space-x-4">
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="text-center p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Chef John Doe</h3>
+            <p class="text-gray-500">Head Chef</p>
+          </div>
+        </div>
+
+        <!-- Team Member -->
+        <div class="group bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+          <div class="relative">
+            <img src="./image/chef-2.jpg" alt="Chef 2" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center space-x-4">
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="text-center p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Chef Maria Smith</h3>
+            <p class="text-gray-500">Master Chef & Founder</p>
+          </div>
+        </div>
+
+
+        <!-- Add more team members as needed -->
+            <div class="group bg-gray-50 rounded-xl shadow-lg overflow-hidden">
+          <div class="relative">
+            <img src="./image/chef-3.jpg" alt="Chef 2" class="w-full h-72 object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-black bg-opacity-40 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center space-x-4">
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-twitter"></i></a>
+              <a href="#" class="text-white hover:text-[#c9a581]"><i class="fab fa-instagram"></i></a>
+            </div>
+          </div>
+          <div class="text-center p-6">
+            <h3 class="text-xl font-semibold text-gray-800">Chef Manuel Abel</h3>
+            <p class="text-gray-500">Pastry Chef</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- Explore By Cuisines Section -->
+<section class="bg-[#0e1730] text-white py-20 md:h-screen ">
+  <div class="container mx-auto px-6 text-center">
+    
+    <!-- Heading -->
+    <h2 class="text-xl tracking-widest uppercase text-white mb-16 md:text-2xl md:mb-20 md:mt-20">
+      Explore by our cuisines
+    </h2>
+
+    <!-- Item 1 -->
+    <div class="relative mb-12">
+      <!-- Left image -->
+      <img src="./image/food6.jpg" alt="Appetizers" 
+           class="absolute left-10 top-1/2 transform -translate-y-1/2 w-28 h-44 object-cover rounded-t-full rounded-b-full shadow-lg" />
+
+      <!-- Text -->
+      <h3 class="text-4xl font-serif tracking-wide"><a href="./menu.html">Appetizers</a></h3>
+      <div class="border-b border-[#c9a581] mt-2 w-full"></div>
+    </div>
+
+    <!-- Item 2 -->
+    <div class="relative mb-12">
+      <h3 class="text-4xl font-serif tracking-wide"><a href="./menu.html">Main Courses</a></h3>
+      <div class="border-b border-[#c9a581] mt-2 w-full"></div>
+    </div>
+
+    <!-- Item 3 -->
+    <div class="relative mb-12">
+
+      <h3 class="text-4xl font-serif tracking-wide"><a href="./menu.html">Desserts</a></h3>
+      <div class="border-b border-[#c9a581] mt-2 w-full"></div>
+    </div>
+
+    <!-- Item 4 -->
+    <div class="relative mb-12">
+      <h3 class="text-4xl font-serif tracking-wide"><a href="./menu.html">Wine & Champagne</a></h3>
+      <div class="border-b border-[#c9a581] mt-2 w-full"></div>
+
+      <!-- Right image -->
+       <img src="./image/wine-g.jpg" alt="Wine & Champagne"
+           class="absolute right-16 top-1/2 transform-translate-y-1/2 w-28 h-44 object-cover rounded-full shadow-lg" />
+    </div> 
+  </div>
+</section>
+
+<section class="">
+    <div>
+        <h1>Let's Talk More </h1>
+        <p>We would be delited to hear from you </p>
+    </div>
+    <div>
+        <button>
+            CONTACT US
+        </button>
+    </div>
+</section>
+
+
+
+
+  
+
+
+
+
+
+   <script type="module" src="/src/main.js"></script>
+</body>
+</html>
