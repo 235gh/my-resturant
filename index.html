@@ -1,356 +1,361 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>miller</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>miller</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- ✅ SwiperJS + Config -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  </head>
-  <body class="bg-[#0e1730] text-white">
-    <header class="main-header relative p-30 pb-56 md:flex md:flex-col md:items-center py-4 md:p-28 md:pt-10 md:h-screen">
-      <div>
-        <!-- Logo -->
-        <img
-          src="./src/image/logo.png"
-          alt="Logo"
-          class="md:mb-3 md:mt-0 w-52 md:w-60"
-        />
-        <!-- Hamburger icon -->
-        <label
-          for="menu"
-          class="md:hidden cursor-pointer text-white absolute top-4 right-4 z-50"
-          aria-label="navigation Toggle"
-        >
-          <div class="w-6 h-0.5 bg-white"></div>
-          <div class="w-6 h-0.5 bg-white my-1"></div>
-          <div class="w-6 h-0.5 bg-white"></div>
-        </label>
-      </div>
+  <!-- ✅ SwiperJS + Config -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-      <!-- Navbar -->
-      <nav class="relative w-full md:mb-36">
+</head>
+
+<body class="bg-[#0e1730] text-white">
+  <header class="relative py-4 pb-56 main-header p-30 md:flex md:flex-col md:items-center md:p-28 md:pt-10 md:h-screen">
+    <div
+      class="flex justify-between md:flex md:justify-between md:items-center md:w-full lg:flex-col lg:justify-around">
+      <!-- Logo -->
+      <img src="./src/image/logo.png" alt="Logo" class="md:mb-3 md:mt-0 w-52 md:w-60" />
+      <nav class="relative w-full md:mb-2">
         <!-- Checkbox toggle -->
-        <input
-          type="checkbox"
-          name="checkb"
-          class="hidden"
-          id="menu"
-          title="navigation Toggle"
-        />
-        <!-- logo for menu -->
-       
+        <input type="checkbox" id="menu" class="hidden peer" title="navigation Toggle" />
+
+        <!-- Hamburger / X icon -->
+        <label for="menu"
+          class="absolute z-50 flex flex-col items-center justify-center w-8 h-8 cursor-pointer top-4 right-4 md:hidden">
+          <!-- Hamburger bars -->
+          <div
+            class="w-6 h-0.5 bg-white transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-1.5">
+          </div>
+          <div class="w-6 h-0.5 bg-white my-1 transition-all duration-300 peer-checked:opacity-0"></div>
+          <div
+            class="w-6 h-0.5 bg-white transition-all duration-300 peer-checked:-rotate-45 peer-checked:-translate-y-1.5">
+          </div>
+        </label>
+
         <!-- Menu -->
-        <ul class="md:flex  md:space-x-6 text-black md:text-white font-bold md:justify-center md:gap-11">
-          <div>
-         <img
-           src="./src/image/logo-lg-darker.png"
-           alt="Logo"
-           class="w-52 mb-2 md:hidden"
-         />
-       </div>
-          <li class=" py-2 px-2 hover:text-slate-500"><a href="index.html">HomePage</a></li>
-          <li class=" py-2 px-2  hover:text-slate-500"><a href="src/menu.html">Menu</a></li>
-        <li class="relative md:group">
-                  <!-- Toggle (used on mobile; ignored on desktop) -->
-                    <button
-                   id="pages-toggle"
-                   type="button"
-                   class="flex justify-between w-full py-2 px-2 items-center hover:text-slate-500 md:cursor-default"
-                  aria-expanded="false"
-                  aria-controls="pages-menu"
-                  >
-                  Page
-                <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
-              </button>
+        <ul
+          class="hidden flex-col font-bold text-black bg-[#0e1730] text-white p-6 space-y-4 
+                    peer-checked:flex
+                    md:flex md:flex-row md:space-y-0 md:space-x-6 md:justify-center md:gap-11 md:bg-transparent md:text-white md:p-0">
+          <!-- Mobile logo -->
+          <div class="md:hidden">
+            <img src="./src/image/logo.png" alt="Logo" class="mb-2 w-52" />
+          </div>
 
-               <!-- One menu used for both, but:
-               - mobile: JS toggles `hidden`
-               - desktop: hover via md:group -->
-          <ul
-  id="pages-menu"
-  class="absolute left-0 top-full w-44 bg-white text-black rounded-md shadow-xl z-30
-  hidden
-  md:opacity-0 md:invisible
-  md:group-hover:opacity-100 md:group-hover:visible md:group-hover:translate-y-0
-  md:transition md:duration-200"
->
-             <li><a href="./src/about.html" class="block px-4 py-2 hover:bg-slate-100">About Us</a></li>
-               <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Login</a></li>
-             <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Sign Up</a></li>
+          <li><a href="#" class="px-2 py-2 hover:text-slate-400">HomePage</a></li>
+          <li><a href="./src/menu.html" class="px-2 py-2 hover:text-slate-400">Menu</a></li>
+
+          <!-- Dropdown -->
+          <li class="relative group">
+            <button id="pages-toggle"
+              class="flex items-center justify-between w-full px-2 py-2 hover:text-slate-400 md:cursor-default">
+              Page
+              <i class="ml-1 text-xs fa-solid fa-chevron-down"></i>
+            </button>
+
+            <ul id="pages-dropdown"
+              class="absolute left-0 z-10 hidden w-40 text-black bg-white rounded-md shadow-xl top-full md:group-hover:block">
+              <li><a href="/src/about.html" class="block px-4 py-2 hover:bg-slate-100">About Us</a></li>
+              <li><a href="./src/ourChef.html" class="block px-4 py-2 hover:bg-slate-100">Our Chefs</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Login</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Sign Up</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" class="px-2 py-2 hover:text-slate-400">Contact</a></li>
         </ul>
-       </li>
-          <li class=" py-2 px-2  hover:text-slate-500"><a href="#">Contact</a></li>
-        </ul>
-       </div>
       </nav>
+    </div>
 
-      <section class="text-center">
-        <h1 class=" font-bold  text-4xl mt-24 md:font-bold md:text-6xl text-[#c9a581] md:mt-6">
-          Food That Finds Its Way <br />
-        Into Your Dreams
-        </h1>
-        <p class="text-xl text-gray-300 mt-2 mb-6">
-          Experience the best dining with us. We serve nothing but the finest
-          dishes, crafted with the freshest ingredients. All to put a smile on
-          your face.
-        </p>
-        <button class=" rounded-md border-2 font-serif font-bold transition-all duration-[350ms] ease-in-out hover:translate-y-0.5 hover:bg-white hover:text-white bg-[#0e1730]  p-3 text-white border-[#c9a581] text-center">
-          <a class="" href="#">View Our Menu</a>
-        </button>
-      </section>
-    </header>
-
-    <main>
-      <div class="f-menu text-center">
-        <h2 class="text-2xl md:text-3xl md:text-center md:pt-12 font-bold mt-9 mb-3 text-[#c9a581]">FOOD MENU</h2>
-        <h1 class="text-3xl font-bold mb-0 text-[#c9a581]">DISCOVER OUR MENU</h1>
-        <!--Card Area-->
-        <div class="menu-cards md:mx-auto  md:flex  md:justify-center md:items-center">
-          <div class="card1 md:p-10  border rounded-2xl p-5 md:m-1 mt-12 m-20 pb-24">
-            <img class="w-44  h-44 mb-4 mx-auto border-white shadow-lg object-cover rounded-full " src="./src/image/breakfast.jpg" alt="">
-            <h3 class="text-3xl font-bold mb-2 text-[#c9a581] ">Breakfast</h3>
-                <p class=" text-xl mb-3"> Breakfast casserole  ............................................... $20</p>
-                <p class="text-xl mb-3">Greek Yogurt   .......................................................... $15</p>
-                <p class="text-xl mb-3">Sandwich & Coke .................................................. $10</p>
-                <p class="text-xl mb-14">Fruit Salad ............................................................ $12</p>
-            <button class="rounded-md border-2 font-serif font-bold transition-all duration-[350ms] ease-in-out hover:translate-y-0.5 hover:bg-white hover:text-black bg-black w-full p-2 text-white border-[#c9a581] text-center">
-              MAKE ORDER
-            </button>
-          </div>
-          <div class="card2  md:p-10  border rounded-2xl p-5 md:m1 mt-12 m-20 pb-24">
-            <img class="w-44  h-44 mb-4 mx-auto border-white shadow-lg object-cover rounded-full" src="./src/image/lunch.jpg" alt="">
-            <h3 class="text-3xl font-bold mb-2 text-[#c9a581]">Lunch</h3>
-            <p class="text-xl mb-3">Buffalo Chicken Grain   ........................................... $20</p>
-            <p class=" text-xl mb-3">Milkey Donunt  ........................................................ $15</p>
-            <p class=" text-xl mb-3">Ve ggie Mason   ....................................................... $18</p>
-            <p class=" text-xl mb-14">Macaroni & Cheese ............................................. $50</p>
-            <button class="rounded-md border-2 font-serif font-bold transition-colors duration-300 ease-in-out hover:bg-white hover:text-black bg-[#0e1730] w-full p-2 text-white border-[#c9a581] text-center">
-              MAKE ORDER
-            </button>
-          </div>
-            <div class="card3  md:p-10   md:m-1 border rounded-2xl p-5 mt-12 m-20 pb-24">
-              <img class="w-44  h-44 mb-4 mx-auto border-white shadow-lg object-cover rounded-full" src="./src/image/dinner.jpg" alt="">
-              <h3 class="text-3xl font-bold mb-2 text-[#c9a581]">Dinner</h3>
-              <p class="text-xl mb-3">Jellof Rice ............................................ $100</p>
-              <p class="text-xl mb-3">Pizza .............................................. $75</p>
-              <p class="text-xl mb-3">Noodles ............................................... $90</p>
-              <p class="text-xl mb-14">Fish Tacos  ............................................... $32</p>
-              <button class="rounded-md border-2 font-serif font-bold transition-all duration-[350ms] ease-in-out hover:translate-y-0.5 hover:bg-white hover:text-black bg-[#0e1730] w-full p-2 text-white border-[#c9a581] text-center">
-              MAKE ORDER
-            </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-
-    <section class="welcome m-10  mt-10  ">
-      <div class="subwelcome">
-        <img class="mb-8  border-white shadow-lg object-cover rounded-md border-2 " src="./src/image/chef2.jpg" alt="">
-        <div class="text-area">
-          <h2 class="font-bold mb-6 text-xl text-[#c9a581]">Welcome At</h2>
-          <h1 class="font-bold mb-8 text-4xl text-[#c9a581]">Savory Haven</h1>
-          <p class="font-serif mb-9">**“Welcome to <span class="font-bold font-mono">Savory Haven</span>, where every plate tells a story of flavor, passion, and tradition. Here, food isn’t just served —
-            it’s crafted by our dedicated chefs who pour their heart and soul into every recipe.
-             From sizzling classics to bold new tastes, each bite is designed to make you feel right at home.
-
-              Our faithful, kind, and loyal staff are more than just a team — they’re family, and they treat
-               every guest like one too. Step inside, bring your appetite, and let us serve you a delicious experience you’ll never forget.
-              At <span class="font-bold font-mono">Savory Haven</span>, we don’t just feed you — we welcome you.”**
-          </p>
-          <button class="mt-4 bg-[#0e1730] text-white border-[#c9a581] border-2 py-2 px-4 rounded p-16 mb-9">
-            Explore Menu
-          </button>
-          <div class="schedule md:flex md:gap-10">
-            <div class="box1 py-[60px] px-[50px] border-[#c9a581] rounded-md border-4 mb-9 mt-5">
-              <h3 class="font-bold text-xl text-[#c9a581]">Lunch</h3>
-              <p class="text-[#cccccc]">Saturday and Sunday</p>
-              <p class="text-[#cccccc]">Reservation from 12pm to 2.30pm</p>
-            </div>
-            <div class="box2 py-[60px] px-[50px] border-[#c9a581] rounded-md border-4 mb-9 mt-5">
-              <h3 class="font-bold text-xl  text-[#c9a581]">Dinner</h3>
-              <p class="text-[#cccccc]">Thursday and Saturday</p>
-              <p class="text-[#cccccc]">Reservation from 6pm to 10pm</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <section class="text-center">
+      <h1 class="font-bold text-4xl mt-24 md:text-6xl text-[#c9a581] md:mt-6">
+        Food That Finds Its Way <br /> Into Your Dreams
+      </h1>
+      <p class="mt-2 mb-6 text-xl text-gray-300">
+        Experience the best dining with us. We serve nothing but the finest
+        dishes, crafted with the freshest ingredients. All to put a smile on
+        your face.
+      </p>
+      <button
+        class="rounded-md border-2 font-serif font-bold transition-all duration-300 ease-in-out hover:translate-y-0.5 hover:bg-white hover:text-[#0e1730] bg-[#0e1730] p-3 text-white border-[#c9a581]">
+        <a href="#">View Our Menu</a>
+      </button>
     </section>
 
-<section class="w-full h-screen py-20 bg-gray-900 text-white">
-  <div class="text-center mb-12">
-    <h2 class="text-4xl font-bold text-[#c9a581] md:text-6xl">Testimonials</h2>
-    <p class="text-lg text-gray-400 mt-2">From Our Customers</p>
-  </div>
+  </header>
 
-  <!-- Swiper -->
-  <div class="swiper mySwiper max-w-4xl mx-auto px-10">
-    <div class="swiper-wrapper">
-
-      <!-- Testimony 1 -->
-      <div class="swiper-slide text-center px-6 transition-all duration-500 opacity-30 scale-90 text-gray-400">
-        <h3 class="text-2xl italic font-semibold">Where Quality Meets Perfection</h3>
-        <p class="mt-4 text-lg max-w-2xl mx-auto">
-          "My recent visit to Grand Restaurant exceeded all expectations. The menu had a fantastic variety of options, and I was blown away by the quality of ingredients and presentation."
-        </p>
-        <h4 class="mt-6 font-bold">— Jane Bennett</h4>
+  <main>
+    <!-- Hero Section -->
+    <div class="text-center f-menu">
+      <h2 class="text-2xl md:text-3xl md:text-center md:pt-12 font-bold mt-9 mb-3 text-[#c9a581]">FOOD MENU</h2>
+      <h1 class="text-3xl font-bold mb-0 text-[#c9a581]">DISCOVER OUR MENU</h1>
+      <!--Card Area-->
+      <div class="menu-cards md:mx-auto md:flex md:justify-center md:items-center">
+        <div class="p-5 pb-24 m-20 mt-12 border card1 md:p-10 rounded-2xl md:m-1">
+          <img class="object-cover mx-auto mb-4 border-white rounded-full shadow-lg w-44 h-44 "
+            src="./src/image/breakfast.jpg" alt="">
+          <h3 class="text-3xl font-bold mb-2 text-[#c9a581] ">Breakfast</h3>
+          <p class="mb-3 text-xl "> Breakfast casserole ............................................... $20</p>
+          <p class="mb-3 text-xl">Greek Yogurt .......................................................... $15</p>
+          <p class="mb-3 text-xl">Sandwich & Coke .................................................. $10</p>
+          <p class="text-xl mb-14">Fruit Salad ............................................................ $12</p>
+          <button
+            class="rounded-md border-2 font-serif font-bold transition-all duration-[350ms] ease-in-out hover:translate-y-0.5 hover:bg-white hover:text-black bg-black w-full p-2 text-white border-[#c9a581] text-center">
+            MAKE ORDER
+          </button>
+        </div>
+        <div class="p-5 pb-24 m-20 mt-12 border card2 md:p-10 rounded-2xl md:m1">
+          <img class="object-cover mx-auto mb-4 border-white rounded-full shadow-lg w-44 h-44"
+            src="./src/image/lunch.jpg" alt="">
+          <h3 class="text-3xl font-bold mb-2 text-[#c9a581]">Lunch</h3>
+          <p class="mb-3 text-xl">Buffalo Chicken Grain ........................................... $20</p>
+          <p class="mb-3 text-xl ">Milkey Donunt ........................................................ $15</p>
+          <p class="mb-3 text-xl ">Ve ggie Mason ....................................................... $18</p>
+          <p class="text-xl mb-14">Macaroni & Cheese ............................................. $50</p>
+          <button
+            class="rounded-md border-2 font-serif font-bold transition-colors duration-300 ease-in-out hover:bg-white hover:text-black bg-[#0e1730] w-full p-2 text-white border-[#c9a581] text-center">
+            MAKE ORDER
+          </button>
+        </div>
+        <div class="p-5 pb-24 m-20 mt-12 border card3 md:p-10 md:m-1 rounded-2xl">
+          <img class="object-cover mx-auto mb-4 border-white rounded-full shadow-lg w-44 h-44"
+            src="./src/image/dinner.jpg" alt="">
+          <h3 class="text-3xl font-bold mb-2 text-[#c9a581]">Dinner</h3>
+          <p class="mb-3 text-xl">Jellof Rice ............................................ $100</p>
+          <p class="mb-3 text-xl">Pizza .............................................. $75</p>
+          <p class="mb-3 text-xl">Noodles ............................................... $90</p>
+          <p class="text-xl mb-14">Fish Tacos ............................................... $32</p>
+          <button
+            class="rounded-md border-2 font-serif font-bold transition-all duration-[350ms] ease-in-out hover:translate-y-0.5 hover:bg-white hover:text-black bg-[#0e1730] w-full p-2 text-white border-[#c9a581] text-center">
+            MAKE ORDER
+          </button>
+        </div>
       </div>
+    </div>
+    </div>
+  </main>
 
-      <!-- Testimony 2 -->
-      <div class="swiper-slide text-center px-6 transition-all duration-500 opacity-30 scale-90 text-gray-400">
-        <h3 class="text-2xl italic font-semibold">A Symphony of Flavors</h3>
-        <p class="mt-4 text-lg max-w-2xl mx-auto">
-          "The flavors were rich, the portions generous, and the service outstanding. It’s a place I’ll recommend to everyone."
+  <section class="m-10 mt-10 welcome ">
+    <div class="subwelcome">
+      <img class="object-cover mb-8 border-2 border-white rounded-md shadow-lg " src="./src/image/chef2.jpg" alt="">
+      <div class="text-area">
+        <h2 class="font-bold mb-6 text-xl text-[#c9a581]">Welcome At</h2>
+        <h1 class="font-bold mb-8 text-4xl text-[#c9a581]">Savory Haven</h1>
+        <p class="font-serif mb-9">**“Welcome to <span class="font-mono font-bold">Savory Haven</span>, where every
+          plate tells a story of flavor, passion, and tradition. Here, food isn’t just served —
+          it’s crafted by our dedicated chefs who pour their heart and soul into every recipe.
+          From sizzling classics to bold new tastes, each bite is designed to make you feel right at home.
+
+          Our faithful, kind, and loyal staff are more than just a team — they’re family, and they treat
+          every guest like one too. Step inside, bring your appetite, and let us serve you a delicious experience you’ll
+          never forget.
+          At <span class="font-mono font-bold">Savory Haven</span>, we don’t just feed you — we welcome you.”**
         </p>
-        <h4 class="mt-6 font-bold">— Christina Hardy</h4>
+        <button class="mt-4 bg-[#0e1730] text-white border-[#c9a581] border-2 py-2 px-4 rounded p-16 mb-9">
+          Explore Menu
+        </button>
+        <div class="schedule md:flex md:gap-10">
+          <div class="box1 py-[60px] px-[50px] border-[#c9a581] rounded-md border-4 mb-9 mt-5">
+            <h3 class="font-bold text-xl text-[#c9a581]">Lunch</h3>
+            <p class="text-[#cccccc]">Saturday and Sunday</p>
+            <p class="text-[#cccccc]">Reservation from 12pm to 2.30pm</p>
+          </div>
+          <div class="box2 py-[60px] px-[50px] border-[#c9a581] rounded-md border-4 mb-9 mt-5">
+            <h3 class="font-bold text-xl  text-[#c9a581]">Dinner</h3>
+            <p class="text-[#cccccc]">Thursday and Saturday</p>
+            <p class="text-[#cccccc]">Reservation from 6pm to 10pm</p>
+          </div>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Testimony 3 -->
-      <div class="swiper-slide text-center px-6 transition-all duration-500 opacity-30 scale-90 text-gray-400">
-        <h3 class="text-2xl italic font-semibold">A Perfect Culinary Journey</h3>
-        <p class="mt-4 text-lg max-w-2xl mx-auto">
-          "Every dish felt like an artwork. The chefs clearly put their heart into every plate. Truly unforgettable dining."
-        </p>
-        <h4 class="mt-6 font-bold">— James Carter</h4>
+  <section class="w-full h-screen py-20 text-white bg-gray-900">
+    <div class="mb-12 text-center">
+      <h2 class="text-4xl font-bold text-[#c9a581] md:text-6xl">Testimonials</h2>
+      <p class="mt-2 text-lg text-gray-400">From Our Customers</p>
+    </div>
+
+    <!-- Swiper -->
+    <div class="max-w-4xl px-10 mx-auto swiper mySwiper">
+      <div class="swiper-wrapper">
+
+        <!-- Testimony 1 -->
+        <div class="px-6 text-center text-gray-400 transition-all duration-500 scale-90 swiper-slide opacity-30">
+          <h3 class="text-2xl italic font-semibold">Where Quality Meets Perfection</h3>
+          <p class="max-w-2xl mx-auto mt-4 text-lg">
+            "My recent visit to Grand Restaurant exceeded all expectations. The menu had a fantastic variety of options,
+            and I was blown away by the quality of ingredients and presentation."
+          </p>
+          <h4 class="mt-6 font-bold">— Jane Bennett</h4>
+        </div>
+
+        <!-- Testimony 2 -->
+        <div class="px-6 text-center text-gray-400 transition-all duration-500 scale-90 swiper-slide opacity-30">
+          <h3 class="text-2xl italic font-semibold">A Symphony of Flavors</h3>
+          <p class="max-w-2xl mx-auto mt-4 text-lg">
+            "The flavors were rich, the portions generous, and the service outstanding. It’s a place I’ll recommend to
+            everyone."
+          </p>
+          <h4 class="mt-6 font-bold">— Christina Hardy</h4>
+        </div>
+
+        <!-- Testimony 3 -->
+        <div class="px-6 text-center text-gray-400 transition-all duration-500 scale-90 swiper-slide opacity-30">
+          <h3 class="text-2xl italic font-semibold">A Perfect Culinary Journey</h3>
+          <p class="max-w-2xl mx-auto mt-4 text-lg">
+            "Every dish felt like an artwork. The chefs clearly put their heart into every plate. Truly unforgettable
+            dining."
+          </p>
+          <h4 class="mt-6 font-bold">— James Carter</h4>
+        </div>
+
+        <!-- Testimony 4 -->
+        <div class="px-6 text-center text-gray-400 transition-all duration-500 scale-90 swiper-slide opacity-30">
+          <h3 class="text-2xl italic font-semibold">Exceptional Service, Unforgettable Taste</h3>
+          <p class="max-w-2xl mx-auto mt-4 text-lg">
+            "From the warm welcome at the door to the last bite of dessert, everything was perfect. The staff truly care
+            about making you feel at home."
+          </p>
+          <h4 class="mt-6 font-bold">— Olivia Martinez</h4>
+        </div>
+
+        <!-- Testimony 5 -->
+        <div class="px-6 text-center text-gray-400 transition-all duration-500 scale-90 swiper-slide opacity-30">
+          <h3 class="text-2xl italic font-semibold">The Best Dining Experience in Town</h3>
+          <p class="max-w-2xl mx-auto mt-4 text-lg">
+            "I’ve tried many restaurants, but this one is on another level. The atmosphere, the food, and the attention
+            to detail make it a must-visit."
+          </p>
+          <h4 class="mt-6 font-bold">— Michael Smith</h4>
+        </div>
+
+        <!-- Testimony 6 -->
+        <div class="px-6 text-center text-gray-400 transition-all duration-500 scale-90 swiper-slide opacity-30">
+          <h3 class="text-2xl italic font-semibold">Fresh, Flavorful, and Fantastic</h3>
+          <p class="max-w-2xl mx-auto mt-4 text-lg">
+            "Every dish was bursting with fresh flavors. You can tell they use only the best ingredients. I’ll
+            definitely be back with friends."
+          </p>
+          <h4 class="mt-6 font-bold">— Sophia Lee</h4>
+        </div>
+
+        <!-- Testimony 7 -->
+        <div class="px-6 text-center text-gray-400 transition-all duration-500 scale-90 swiper-slide opacity-30">
+          <h3 class="text-2xl italic font-semibold">A Hidden Gem Worth Discovering</h3>
+          <p class="max-w-2xl mx-auto mt-4 text-lg">
+            "I almost don’t want to share this secret, but this place deserves recognition. The food was divine, and the
+            ambiance was relaxing."
+          </p>
+          <h4 class="mt-6 font-bold">— Daniel Johnson</h4>
+        </div>
+
+        <!-- Testimony 8 -->
+        <div class="px-6 text-center text-gray-400 transition-all duration-500 scale-90 swiper-slide opacity-30">
+          <h3 class="text-2xl italic font-semibold">Truly a Five-Star Restaurant</h3>
+          <p class="max-w-2xl mx-auto mt-4 text-lg">
+            "From presentation to taste, everything exceeded expectations. If you want a real fine dining experience,
+            look no further."
+          </p>
+          <h4 class="mt-6 font-bold">— Emma Williams</h4>
+        </div>
+
       </div>
+    </div>
+  </section>
 
-      <!-- Testimony 4 -->
-      <div class="swiper-slide text-center px-6 transition-all duration-500 opacity-30 scale-90 text-gray-400">
-        <h3 class="text-2xl italic font-semibold">Exceptional Service, Unforgettable Taste</h3>
-        <p class="mt-4 text-lg max-w-2xl mx-auto">
-          "From the warm welcome at the door to the last bite of dessert, everything was perfect. The staff truly care about making you feel at home."
-        </p>
-        <h4 class="mt-6 font-bold">— Olivia Martinez</h4>
-      </div>
 
-      <!-- Testimony 5 -->
-      <div class="swiper-slide text-center px-6 transition-all duration-500 opacity-30 scale-90 text-gray-400">
-        <h3 class="text-2xl italic font-semibold">The Best Dining Experience in Town</h3>
-        <p class="mt-4 text-lg max-w-2xl mx-auto">
-          "I’ve tried many restaurants, but this one is on another level. The atmosphere, the food, and the attention to detail make it a must-visit."
-        </p>
-        <h4 class="mt-6 font-bold">— Michael Smith</h4>
-      </div>
-
-      <!-- Testimony 6 -->
-      <div class="swiper-slide text-center px-6 transition-all duration-500 opacity-30 scale-90 text-gray-400">
-        <h3 class="text-2xl italic font-semibold">Fresh, Flavorful, and Fantastic</h3>
-        <p class="mt-4 text-lg max-w-2xl mx-auto">
-          "Every dish was bursting with fresh flavors. You can tell they use only the best ingredients. I’ll definitely be back with friends."
-        </p>
-        <h4 class="mt-6 font-bold">— Sophia Lee</h4>
-      </div>
-
-      <!-- Testimony 7 -->
-      <div class="swiper-slide text-center px-6 transition-all duration-500 opacity-30 scale-90 text-gray-400">
-        <h3 class="text-2xl italic font-semibold">A Hidden Gem Worth Discovering</h3>
-        <p class="mt-4 text-lg max-w-2xl mx-auto">
-          "I almost don’t want to share this secret, but this place deserves recognition. The food was divine, and the ambiance was relaxing."
-        </p>
-        <h4 class="mt-6 font-bold">— Daniel Johnson</h4>
-      </div>
-
-      <!-- Testimony 8 -->
-      <div class="swiper-slide text-center px-6 transition-all duration-500 opacity-30 scale-90 text-gray-400">
-        <h3 class="text-2xl italic font-semibold">Truly a Five-Star Restaurant</h3>
-        <p class="mt-4 text-lg max-w-2xl mx-auto">
-          "From presentation to taste, everything exceeded expectations. If you want a real fine dining experience, look no further."
-        </p>
-        <h4 class="mt-6 font-bold">— Emma Williams</h4>
+  <section class="reservation  bg-[#0e1730]">
+    <div class="gap-8 sub-reservation md:flex md:">
+      <img class="object-cover w-full border-2 shadow-lg md:w-6/12" src="./src/image/wine-g.jpg" alt="">
+      <div class="reservation-area m-9">
+        <h2 class="text-3xl font-bold text-[#c9a581] text-center md:text-7xl md:mb-6 md:mt-24">Make a Reservation</h2>
+        <form class="mt-4">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <label class="text-[#b4b7bf] md:text-2xl" for="name">Your Name</label>
+            <input type="text" id="name"
+              class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5 " required />
+            <label class="text-[#b4b7bf] md:text-2xl" for="email">Your Email</label>
+            <input type="email" id="email"
+              class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
+            <label class="text-[#b4b7bf] md:text-2xl" for="phone">Your Phone</label>
+            <input type="tel" id="phone"
+              class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
+            <label class="text-[#b4b7bf] md:text-2xl" for="people">Number of Guests</label>
+            <input type="number" id="people"
+              class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
+            <label class="text-[#b4b7bf] md:text-2xl" for="date">Date</label>
+            <input type="date" id="date"
+              class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
+            <label class="text-[#b4b7bf] md:text-2xl" for="time">Time</label>
+            <input type="time" id="time"
+              class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
+          </div>
+          <button type="submit"
+            class="mt-11 bg-[#0e1730] text-white border-[#c9a581] border-2 py-4 px-4 rounded   mb-9 md:text-xl">Reserve
+            Now</button>
+          <div class="contact">
+            <h2 class="mb-5 font-serif text-xl md:text-4xl md:mt-28 md:mb-10">Follow Us</h2>
+            <div class="icon">
+              <div class="mb-10 space-x-6 icon md:mb-20">
+                <i class="p-2 text-white border-2 rounded-full fa-brands fa-facebook"></i>
+                <i class="p-2 text-white border-2 rounded-full fa-brands fa-twitter"></i>
+                <i class="p-2 text-white border-2 rounded-full fa-brands fa-instagram"></i>
+                <i class="p-2 text-white border-2 rounded-full fa-brands fa-youtube "></i>
+              </div>
+            </div>
+            <p class="mb-4 font-serif md:text-xl md:mb-11">RESERVATION BY PHONE</p>
+            <h1 class="font-serif text-2xl md:text-3xl md:mb-6">+1 3435 8942</h1>
+            <h2 class="mb-24 font-serif text-2xl md:text-3xl">+1 2234 7823</h2>
+          </div>
+        </form>
       </div>
 
     </div>
-  </div>
-</section>
 
+  </section>
 
-<section class="reservation  bg-[#0e1730]">
-  <div class="sub-reservation  md:flex md: gap-8">
-    <img class="w-full shadow-lg object-cover border-2 md:w-6/12" src="./src/image/wine-g.jpg" alt="">
-    <div class="reservation-area m-9">
-    <h2 class="text-3xl font-bold text-[#c9a581] text-center md:text-7xl md:mb-6 md:mt-24">Make a Reservation</h2>
-    <form class="mt-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-        <label class="text-[#b4b7bf] md:text-2xl" for="name">Your Name</label>
-        <input type="text" id="name" class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5 " required />
-        <label class="text-[#b4b7bf] md:text-2xl" for="email">Your Email</label>
-        <input type="email" id="email" class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
-        <label class="text-[#b4b7bf] md:text-2xl" for="phone">Your Phone</label>
-        <input type="tel" id="phone" class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
-        <label class="text-[#b4b7bf] md:text-2xl" for="people">Number of Guests</label>
-        <input type="number" id="people" class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
-        <label class="text-[#b4b7bf] md:text-2xl" for="date">Date</label>
-        <input type="date" id="date" class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
-        <label class="text-[#b4b7bf] md:text-2xl" for="time">Time</label>
-        <input type="time" id="time" class="border-[#b4b7bf] bg-[#0e1730] border-2 p-3 text-white rounded md:w-80 md:mb-5" required />
-      </div>
-      <button type="submit" class="mt-11 bg-[#0e1730] text-white border-[#c9a581] border-2 py-4 px-4 rounded   mb-9 md:text-xl">Reserve Now</button>
-        <div class="contact">
-  <h2 class="text-xl font-serif mb-5 md:text-4xl md:mt-28 md:mb-10">Follow Us</h2>
-       <div class="icon">
-        <div class="icon  space-x-6 mb-10 md:mb-20">
-          <i class="fa-brands fa-facebook  border-2 p-2 text-white rounded-full"></i>
-          <i class="fa-brands fa-twitter border-2 p-2 text-white rounded-full"></i>
-          <i class="fa-brands fa-instagram  border-2 p-2 text-white rounded-full"></i>
-          <i class="fa-brands fa-youtube  border-2 p-2 text-white rounded-full "></i>
-        </div>
-        </div>
-        <p class="mb-4 font-serif md:text-xl md:mb-11">RESERVATION BY PHONE</p>
-        <h1 class="text-2xl font-serif md:text-3xl md:mb-6">+1 3435 8942</h1>
-        <h2 class="text-2xl mb-24 font-serif md:text-3xl">+1 2234 7823</h2>
-        </div>
-    </form>
-  </div>
-
-  </div>
-  
-</section>
-
-<footer>
-  <div class="subfooter text-center">
-        <div class="sub-footer2 md:flex  md:justify-between md:items-center md:gap-16 md:mx-20 md:mt-20 md:mb-10 md:p-[30px] ">
-          <div class="f-1 md:border-r-2 md:pr-20 md:border-[#c9a581]">
-          <h1 class="font-serif text-xl mb-4 md:text-2xl">LUNCH</h1>
+  <footer>
+    <div class="text-center subfooter">
+      <div
+        class="sub-footer2 md:flex  md:justify-between md:items-center md:gap-16 md:mx-20 md:mt-20 md:mb-10 md:p-[30px] ">
+        <div class="f-1 md:border-r-2 md:pr-20 md:border-[#c9a581]">
+          <h1 class="mb-4 font-serif text-xl md:text-2xl">LUNCH</h1>
           <p class="font-serif md:text-lg">Monday-Wednesday: 11am-10pm</p>
-          <p class="font-serif mb-10 md:text-lg ">Thursday-Saturday: 11am-9pm</p>
-          </div>
-          <div class="border-b-2 border-[#c9a581]"></div>
-          <div class="f-2 md:border-r-2 md:pr-28 md:border-[#c9a581]">
-          <h2 class="text-xl font-serif mt-6 mb-4 md:text-2xl md:mt-0">Dinner</h2>
+          <p class="mb-10 font-serif md:text-lg ">Thursday-Saturday: 11am-9pm</p>
+        </div>
+        <div class="border-b-2 border-[#c9a581]"></div>
+        <div class="f-2 md:border-r-2 md:pr-28 md:border-[#c9a581]">
+          <h2 class="mt-6 mb-4 font-serif text-xl md:text-2xl md:mt-0">Dinner</h2>
           <p class="font-serif md:text-lg">Dinner Monday-Sunday</p>
-          <p class="font-serif mb-10 md:text-lg">7pm - 11pm</p>
-          </div>
-          <div class="border-b-2 border-[#c9a581]"></div>
-          <div class="f-3">
-          <h1 class="text-xl font-serif mt-24 mb-4 md:text-2xl md:mt-0">BUFFET</h1>
+          <p class="mb-10 font-serif md:text-lg">7pm - 11pm</p>
+        </div>
+        <div class="border-b-2 border-[#c9a581]"></div>
+        <div class="f-3">
+          <h1 class="mt-24 mb-4 font-serif text-xl md:text-2xl md:mt-0">BUFFET</h1>
           <p class="font-serif mb-14 md:text-lg">Lunch & Dinner Monday-Sunday</p>
-          </div>
-          <div class="border-b-2 border-[#c9a581]"></div>
         </div>
-        <div class="l ">
-          <img src="./src/image/logo.png" alt="" class="w-40 mx-auto mt-6 mb-6 md:w-56">
-          <div class="md:border-b-2 border-[#c9a581]"></div>
-          <p class="font-serif mt-16 mb-16">Copyright © 2025. SAVORIQ Resturant</p>
-        </div>
-  </div>
-</footer>
+        <div class="border-b-2 border-[#c9a581]"></div>
+      </div>
+      <div class="l ">
+        <img src="./src/image/logo.png" alt="" class="w-40 mx-auto mt-6 mb-6 md:w-56">
+        <div class="md:border-b-2 border-[#c9a581]"></div>
+        <p class="mt-16 mb-16 font-serif">Copyright © 2025. SAVORIQ Resturant</p>
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -365,6 +370,7 @@
 
 
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
 </html>
