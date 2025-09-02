@@ -93,7 +93,14 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 
+  // Mobile dropdown toggle
 
+  const pagesToggle = document.getElementById("pages-toggle");
+  const pagesDropdown = document.getElementById("pages-dropdown");
 
-
-
+  pagesToggle.addEventListener("click", (e) => {
+    if (window.innerWidth < 768) { // Only run on mobile
+      e.preventDefault();
+      pagesDropdown.classList.toggle("hidden");
+    }
+  });

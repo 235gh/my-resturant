@@ -1,259 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
-       <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!-- Swiper CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-<!-- Swiper JS -->
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-<!-- SwiperJS + Config -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+  <!-- SwiperJS + Config -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 </head>
-<body class="bg-[#0e1730]">
-    <header class="menu-header
-    relative bg-[#0e1730] p-30  md:flex md:flex-col md:items-center py-4  md:h-screen">
-      <div>
-        <!-- Logo -->
-        <img
-          src="./image/logo.png"
-          alt="Logo"
-          class="md:mb-3 md:mt-0 w-52 md:w-60"
-        />
-        <!-- Hamburger icon -->
-        <label
-          for="menu"
-          class="md:hidden cursor-pointer text-white absolute top-4 right-4 z-50"
-          aria-label="navigation Toggle"
-        >
-          <div class="w-6 h-0.5 bg-white"></div>
-          <div class="w-6 h-0.5 bg-white my-1"></div>
-          <div class="w-6 h-0.5 bg-white"></div>
-        </label>
-      </div>
 
-      <!-- Navbar -->
+<body class="bg-[#0e1730]">
+  <header class="relative py-4 pb-0 main-header p-30 md:flex md:flex-col md:items-center md:p-28 md:pt-10 md:h-screen">
+    <div
+      class="flex justify-between md:flex md:justify-between md:items-center md:w-full lg:flex-col lg:justify-around">
+      <!-- Logo -->
+      <img src="./image/logo.png" alt="Logo" class="md:mb-3 md:mt-0 w-52 md:w-60" />
       <nav class="relative w-full md:mb-2">
         <!-- Checkbox toggle -->
-        <input
-          type="checkbox"
-          name="checkb"
-          class="hidden"
-          id="menu"
-          title="navigation Toggle"
-        />
-        <!-- logo for menu -->
-       
+        <input type="checkbox" id="menu" class="hidden peer" title="navigation Toggle" />
+
+        <!-- Hamburger / X icon -->
+        <label for="menu"
+          class="absolute z-50 flex flex-col items-center justify-center w-8 h-8 cursor-pointer top-4 right-4 md:hidden">
+          <!-- Hamburger bars -->
+          <div
+            class="w-6 h-0.5 bg-white transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-1.5">
+          </div>
+          <div class="w-6 h-0.5 bg-white my-1 transition-all duration-300 peer-checked:opacity-0"></div>
+          <div
+            class="w-6 h-0.5 bg-white transition-all duration-300 peer-checked:-rotate-45 peer-checked:-translate-y-1.5">
+          </div>
+        </label>
+
         <!-- Menu -->
-        <ul class="md:flex  md:space-x-6 text-black md:text-white font-bold md:justify-center md:gap-11">
-          <div>
-         <img
-           src="./image/logo-lg-darker.png"
-           alt="Logo"
-           class="w-52 mb-2 md:hidden"
-         />
-       </div>
-          <li class=" py-2 px-2 hover:text-slate-500"><a href="../index.html">HomePage</a></li>
-          <li class=" py-2 px-2  hover:text-slate-500"><a href="menu.html">Menu</a></li>
-          <li class="relative group ">
-            <button
-            id="pages-toggle"
-             class="flex justify-between w-full py-2 px-2 items-center  hover:text-slate-500">
+        <ul
+          class="hidden flex-col font-bold text-black bg-[#0e1730] text-white p-6 space-y-4 
+                    peer-checked:flex
+                    md:flex md:flex-row md:space-y-0 md:space-x-6 md:justify-center md:gap-11 md:bg-transparent md:text-white md:p-0">
+          <!-- Mobile logo -->
+          <div class="md:hidden">
+            <img src="./image/logo.png" alt="Logo" class="mb-2 w-52" />
+          </div>
+
+          <li><a href="#" class="px-2 py-2 hover:text-slate-400">Menu</a></li>
+          <li><a href="../index.html" class="px-2 py-2 hover:text-slate-400">HomePage</a></li>
+
+          <!-- Dropdown -->
+          <li class="relative group">
+            <button id="pages-toggle"
+              class="flex items-center justify-between w-full px-2 py-2 hover:text-slate-400 md:cursor-default">
               Page
-              <i class="fa-solid fa-chevron-down text-xs ml-1"></i>
+              <i class="ml-1 text-xs fa-solid fa-chevron-down"></i>
             </button>
-            <ul
-              id="pages-dropdown"
-              class="absolute text-black left-0 hidden  bg-white shadow-xl opacity-65 rounded-md top-full w-40 z-10"
-            >
-              <li>
-                <a href="#" class="block px-4 py-2  hover:bg-slate-500 "
-                  >About Us</a
-                >
-              </li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Contact</a></li>
-              <li><a href="./our chef.html" class="block px-4 py-2 hover:bg-slate-500">Our Chefs</a></li>
-              <li>
-                <a href="#" class="block px-4 py-2 hover:bg-slate-500">Login</a>
-              </li>
-              <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Sign Up</a></li>
+
+            <ul id="pages-dropdown"
+              class="absolute left-0 z-10 hidden w-40 text-black bg-white rounded-md shadow-xl top-full md:group-hover:block">
+              <li><a href="/src/about.html" class="block px-4 py-2 hover:bg-slate-100">About Us</a></li>
+              <li><a href="./src/ourChef.html" class="block px-4 py-2 hover:bg-slate-100">Our Chefs</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Login</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Sign Up</a></li>
             </ul>
-             <ul
-               class="absolute text-black left-0 hidden bg-white shadow-xl opacity-65 rounded-md top-full w-40 z-10 md:group-hover:block"
-                >
-                 <li><a href="./about.html" class="block px-4 py-2 hover:bg-slate-500">About Us</a></li>
-                 <li><a href="./our chef.html" class="block px-4 py-2 hover:bg-slate-500">Our Chefs</a></li>
-                 <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Login</a></li>
-                 <li><a href="#" class="block px-4 py-2 hover:bg-slate-500">Sign Up</a></li>
-              </ul>
-            </l>
-          <li class=" py-2 px-2  hover:text-slate-500"><a href="#">Contact</a></li>
+          </li>
+
+          <li><a href="#" class="px-2 py-2 hover:text-slate-400">Contact</a></li>
         </ul>
-       </div>
       </nav>
-         <section>
-        <h4 class="font-san text-center text-4xl mt-7   text-white  md:text-8xl md:mt-40">OUR MENU</h4>
-      </section>
-    </header>
+    </div>
+    <section >
+      <h4 class="mt-40 text-4xl text-center text-white font-san md:text-8xl">OUR MENU</h4>
+    </section>
+  </header>
   
 
-    <main class="m-10">
-        <div class="sub-main">
-            <div class="n-1 md:flex  md:space-x-4 md:flex-row-reverse md:gap-16 ">
-             <div class="md:w-full  h-[700px] overflow-hidden rounded-t-full shadow-5xl object-cover mt-10 mb-5">
-                 <img src="./image/menu-first-p.jpg" alt="" class="w-full h-full object-cover ">
-              </div>
-                <div class="text-area1 text-center text-white md:leading-9 md:mt-48 md:text-left">
-                 <h1 class="text-3xl font-bold font-serif md:text-4xl">The Soul of Our Kitchen</h1>
-                 <p class="font-serif leading-8 md:leading-9 md:mb-10">Every dish tells a story here. From sunlit breakfasts to candlelit dinners, we craft more than meals—we create moments. Our team blends passion with hospitality to make every visit feel like a cherished gathering at home.</p>
-                 <p class="text-xl text-[#c9a581] italic tracking-tight [font-family:'Great_Vibes',cursive] md:mr-48 md:text-3xl">SAVORIQ</p>
-                </div>
-            </div>
-            <div class="n-2 md:flex md:gap-16 ">
-                <div class="img2 w-full md:w-[700px] md:h-[800px] h-[920px] overflow-hidden rounded-t-full shadow-5xl object-cover mt-10 md:relative">
-                    <img src="./image/img-2.jpg" alt="" class="w-full h-full object-cover  md:-mt-1 md:-mb-20">
-                </div>
-                <div class="text-area2">
-                    <h1 class="text-xl tracking-[0.3em] text-white uppercase font-serif mt-7 text-center">ESTD - 1990</h1>
-                     <p class="text-lg md:text-xl text-white italic mt-4 max-w-2xl mx-auto">
-                     At SAVORIQ, we take pride in 
-                    supporting local farmers, artisans, and winemakers, ensuring that every dish 
-                    reflects the authenticity and spirit of love.
-                     We re more than a restaurant— a gathering place for community, stories, and timeless flavors.
-                    </p>
-                    <div class="mt-3 max-w-3xl mx-auto space-y-3 text-white leading-relaxed text-lg">
-                    <p>
-                      Each visit is not just a meal, but a meaningful experience — where 
-                     <span class="italic">flavors, atmosphere, and connection</span> come together 
-                          in perfect harmony.
-                    </p>
-                     </div>
-                </div>
-            </div>
+  <main class="m-10">
+    <div class="sub-main">
+      <div class="n-1 md:flex md:space-x-4 md:flex-row-reverse md:gap-16 ">
+        <div class="md:w-full  h-[700px] overflow-hidden rounded-t-full shadow-5xl object-cover mt-10 mb-5">
+          <img src="./image/menu-first-p.jpg" alt="" class="object-cover w-full h-full ">
         </div>
-    </main>
-    <section class="menu-area  bg-[#070e22]">
-        <div class="sub-menu md:flex md:gap-8  p-4 m-4">
-            <div class="firs text-white">
-                <h1 class="md:text-3xl text-center mt-6 mb-6  text-2xl font-bold font-serif">STARTERS</h1>
-                <img src="./image/noun-diamond-6097846.png" alt="" class="mx-auto md:w-6 md:mt-0">
-                <div class=" mt-6 mb-3 md:flex gap-[310px]  md:items-center">
-                <h1  class="text-xl md:text-2xl font-serif mt-3">FRENCH ONION SOUP</h1>
-                    <p class="md:text-xl text-lg">$10.0 </p>
-                </div>
-                    <p class=" md:mt-2 md:max-w-lg text-[#838791] md:leading-relaxed md:text-lg">Rich beef broth, caramelized onions, and melted Gruyère cheese, served with a crusty baguette.</p>
-                    <div class=" mt-6 mb-3 md:flex md:gap-[330px] md:items-center">
-                         <h1 class="text-xl md:text-2xl font-serif mt-3">GOAT CHEESE SALAD</h1>  
-                             <p class="md:text-xl text-lg">$9.0</p> 
-                    </div>
-                <p class="md:mt-2 md:max-w-lg text-[#838791] md:leading-relaxed md:text-lg">Fresh mixed greens, warm goat cheese, roasted beets, walnuts, and a honey-balsamic vinaigrette.</p>
-                <div  class=" mt-6 mb-3  md:flex md:gap-[360px]  md:items-center">
-                <h1 class=" text-xl md:text-2xl font-serif mt-3">ESCARGOTS DE BOURGOGNE</h1>
-                <p class="md:text-xl text-lg">$12.0</p>
-                </div>
-                <p class=" md:mt-2 md:max-w-lg text-[#838791] md:leading-relaxed md:text-lg">Traditional French snails baked in garlic parsley butter and served with toasted baguette slices.</p>
-            </div>
-            <div class="second text-white leading-relaxed">
-                <h1 class="md:text-3xl text-center mt-6 mb-6  text-2xl font-bold font-serif">Main Courses</h1>
-                <img src="./image/noun-diamond-6097846.png" alt="" class="mx-auto md:w-6 md:mt-0">
-                <div class="md:flex gap-[310px]  md:items-center md:mt-5">
-                <h1 class="text-xl md:text-2xl font-serif mt-3 ">RATATOUQILLE</h1>
-                <p class="md:text-xl mb-3 text-lg">$26.0</p>
-                </div>
-                <p class=" md:mt-2 md:max-w-lg  text-[#838791] md:leading-relaxed md:text-lg">A hearty and flavorful vegetable medley of eggplant, zucchini, tomatoes, and bell peppers, infused with herbs de Provence.</p>
-               <div class=" mb-4 mt-6 md:flex md:gap-[330px] md:items-center">
-                <h1 class="text-xl md:text-2xl font-serif mt-3">STEAK FRITES</h1>
-                <p class="md:text-xl text-lg">$20.0</p>
-               </div>
-                <p class="md:mt-2 md:max-w-lg  text-[#838791] md:leading-relaxed md:text-lg">Grilled ribeye steak served with crispy French fries and a side of peppercorn sauce.</p>
-                <div class=" mt-6 mb-3 md:flex md:gap-[360px]  md:items-center">
-                <h1 class=" text-xl md:text-2xl font-serif mt-3">COQ AU VIN</h1>
-                <p class="md:text-xl text-lg">$24.0</p>
-                </div>
-                <p class=" md:mt-2 md:max-w-lg  text-[#838791] md:leading-relaxed md:text-lg">Tender chicken slow-cooked in red wine with mushrooms, onions, and bacon, served with creamy mashed potatoes.</p>
-            </div>
+        <div class="text-center text-white text-area1 md:leading-9 md:mt-48 md:text-left">
+          <h1 class="font-serif text-3xl font-bold md:text-4xl">The Soul of Our Kitchen</h1>
+          <p class="font-serif leading-8 md:leading-9 md:mb-10">Every dish tells a story here. From sunlit breakfasts to
+            candlelit dinners, we craft more than meals—we create moments. Our team blends passion with hospitality to
+            make every visit feel like a cherished gathering at home.</p>
+          <p
+            class="text-xl text-[#c9a581] italic tracking-tight [font-family:'Great_Vibes',cursive] md:mr-48 md:text-3xl">
+            SAVORIQ</p>
+        </div>
+      </div>
+      <div class="n-2 md:flex md:gap-16 ">
+        <div
+          class="img2 w-full md:w-[700px] md:h-[800px] h-[920px] overflow-hidden rounded-t-full shadow-5xl object-cover mt-10 md:relative">
+          <img src="./image/img-2.jpg" alt="" class="object-cover w-full h-full md:-mt-1 md:-mb-20">
+        </div>
+        <div class="text-area2">
+          <h1 class="text-xl tracking-[0.3em] text-white uppercase font-serif mt-7 text-center">ESTD - 1990</h1>
+          <p class="max-w-2xl mx-auto mt-4 text-lg italic text-white md:text-xl">
+            At SAVORIQ, we take pride in
+            supporting local farmers, artisans, and winemakers, ensuring that every dish
+            reflects the authenticity and spirit of love.
+            We re more than a restaurant— a gathering place for community, stories, and timeless flavors.
+          </p>
+          <div class="max-w-3xl mx-auto mt-3 space-y-3 text-lg leading-relaxed text-white">
+            <p>
+              Each visit is not just a meal, but a meaningful experience — where
+              <span class="italic">flavors, atmosphere, and connection</span> come together
+              in perfect harmony.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <section class="menu-area  bg-[#070e22]">
+    <div class="p-4 m-4 sub-menu md:flex md:gap-8">
+      <div class="text-white firs">
+        <h1 class="mt-6 mb-6 font-serif text-2xl font-bold text-center md:text-3xl">STARTERS</h1>
+        <img src="./image/noun-diamond-6097846.png" alt="" class="mx-auto md:w-6 md:mt-0">
+        <div class=" mt-6 mb-3 md:flex gap-[310px]  md:items-center">
+          <h1 class="mt-3 font-serif text-xl md:text-2xl">FRENCH ONION SOUP</h1>
+          <p class="text-lg md:text-xl">$10.0 </p>
+        </div>
+        <p class=" md:mt-2 md:max-w-lg text-[#838791] md:leading-relaxed md:text-lg">Rich beef broth, caramelized
+          onions, and melted Gruyère cheese, served with a crusty baguette.</p>
+        <div class=" mt-6 mb-3 md:flex md:gap-[330px] md:items-center">
+          <h1 class="mt-3 font-serif text-xl md:text-2xl">GOAT CHEESE SALAD</h1>
+          <p class="text-lg md:text-xl">$9.0</p>
+        </div>
+        <p class="md:mt-2 md:max-w-lg text-[#838791] md:leading-relaxed md:text-lg">Fresh mixed greens, warm goat
+          cheese, roasted beets, walnuts, and a honey-balsamic vinaigrette.</p>
+        <div class=" mt-6 mb-3  md:flex md:gap-[360px]  md:items-center">
+          <h1 class="mt-3 font-serif text-xl md:text-2xl">ESCARGOTS DE BOURGOGNE</h1>
+          <p class="text-lg md:text-xl">$12.0</p>
+        </div>
+        <p class=" md:mt-2 md:max-w-lg text-[#838791] md:leading-relaxed md:text-lg">Traditional French snails baked in
+          garlic parsley butter and served with toasted baguette slices.</p>
+      </div>
+      <div class="leading-relaxed text-white second">
+        <h1 class="mt-6 mb-6 font-serif text-2xl font-bold text-center md:text-3xl">Main Courses</h1>
+        <img src="./image/noun-diamond-6097846.png" alt="" class="mx-auto md:w-6 md:mt-0">
+        <div class="md:flex gap-[310px]  md:items-center md:mt-5">
+          <h1 class="mt-3 font-serif text-xl md:text-2xl ">RATATOUQILLE</h1>
+          <p class="mb-3 text-lg md:text-xl">$26.0</p>
+        </div>
+        <p class=" md:mt-2 md:max-w-lg  text-[#838791] md:leading-relaxed md:text-lg">A hearty and flavorful vegetable
+          medley of eggplant, zucchini, tomatoes, and bell peppers, infused with herbs de Provence.</p>
+        <div class=" mb-4 mt-6 md:flex md:gap-[330px] md:items-center">
+          <h1 class="mt-3 font-serif text-xl md:text-2xl">STEAK FRITES</h1>
+          <p class="text-lg md:text-xl">$20.0</p>
+        </div>
+        <p class="md:mt-2 md:max-w-lg  text-[#838791] md:leading-relaxed md:text-lg">Grilled ribeye steak served with
+          crispy French fries and a side of peppercorn sauce.</p>
+        <div class=" mt-6 mb-3 md:flex md:gap-[360px]  md:items-center">
+          <h1 class="mt-3 font-serif text-xl md:text-2xl">COQ AU VIN</h1>
+          <p class="text-lg md:text-xl">$24.0</p>
+        </div>
+        <p class=" md:mt-2 md:max-w-lg  text-[#838791] md:leading-relaxed md:text-lg">Tender chicken slow-cooked in red
+          wine with mushrooms, onions, and bacon, served with creamy mashed potatoes.</p>
+      </div>
+    </div>
+
+    <!-- Menu Images Carousel -->
+    <div class="relative mt-16 overflow-hidden md:p-4">
+      <!-- Carousel wrapper -->
+      <div id="menuCarousel" class="flex transition-transform duration-1000 ease-in-out gap-9">
+        <!-- Slide 1 -->
+        <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
+          <img src="./image/food1.jpg" alt="Food 1" class="object-cover w-full h-full ">
+        </div>
+        <!-- Slide 2 -->
+        <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5 ">
+          <img src="./image/food2.jpg" alt="Food 2" class="object-cover w-full h-full rounded-t-full md:rounded-t-full">
+        </div>
+        <!-- Slide 3 -->
+        <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
+          <img src="./image/food3.jpg" alt="Food 3" class="object-cover w-full h-full rounded-t-full md:rounded-t-full">
+        </div>
+        <!-- Slide 4 -->
+        <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
+          <img src="./image/food4.jpg" alt="Food 4" class="object-cover w-full h-full rounded-t-full md:rounded-t-full">
+        </div>
+        <!-- Slide 5 -->
+        <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
+          <img src="./image/food5.jpg" alt="Food 5" class="object-cover w-full h-full rounded-t-full md:rounded-t-full">
+        </div>
+        <!-- Slide 6 -->
+        <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
+          <img src="./image/food6.jpg" alt="Food 6" class="object-cover w-full h-full rounded-t-full md:rounded-t-full">
         </div>
 
-        <!-- Menu Images Carousel -->
-<div class="relative md:p-4  overflow-hidden mt-16">
-  <!-- Carousel wrapper -->
-  <div id="menuCarousel" class="flex gap-9 transition-transform duration-1000 ease-in-out">
-    <!-- Slide 1 -->
-    <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
-      <img src="./image/food1.jpg" alt="Food 1"
-        class="w-full h-full object-cover  ">
-    </div>
-    <!-- Slide 2 -->
-    <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5 ">
-      <img src="./image/food2.jpg" alt="Food 2"
-        class="w-full h-full object-cover rounded-t-full md:rounded-t-full">
-    </div>
-    <!-- Slide 3 -->
-    <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
-      <img src="./image/food3.jpg" alt="Food 3"
-        class="w-full h-full object-cover rounded-t-full md:rounded-t-full">
-    </div>
-    <!-- Slide 4 -->
-    <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
-      <img src="./image/food4.jpg" alt="Food 4"
-        class="w-full h-full object-cover rounded-t-full md:rounded-t-full">
-    </div>
-    <!-- Slide 5 -->
-    <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
-      <img src="./image/food5.jpg" alt="Food 5"
-        class="w-full h-full object-cover rounded-t-full md:rounded-t-full">
-    </div>
-    <!-- Slide 6 -->
-    <div class="w-full h-[300px] rounded-t-full  overflow-hidden shadow-5xl object-cover mb-5">
-      <img src="./image/food6.jpg" alt="Food 6"
-        class="w-full h-full object-cover rounded-t-full md:rounded-t-full">
-    </div>
-   
 
-  </div>
-</div>
-    </section>
+      </div>
+    </div>
+  </section>
 
-<footer>
-  <div class="subfooter text-white text-center">
-        <div class="sub-footer2 md:flex  md:justify-between md:items-center md:gap-16 md:mx-20 md:mt-20 md:mb-10 md:p-[30px] ">
-          <div class="f-1 md:border-r-2 md:pr-20 md:border-[#c9a581]">
-          <h1 class="font-serif text-xl mb-4 md:text-2xl">LUNCH</h1>
+  <footer>
+    <div class="text-center text-white subfooter">
+      <div
+        class="sub-footer2 md:flex  md:justify-between md:items-center md:gap-16 md:mx-20 md:mt-20 md:mb-10 md:p-[30px] ">
+        <div class="f-1 md:border-r-2 md:pr-20 md:border-[#c9a581]">
+          <h1 class="mb-4 font-serif text-xl md:text-2xl">LUNCH</h1>
           <p class="font-serif md:text-lg">Monday-Wednesday: 11am-10pm</p>
-          <p class="font-serif mb-10 md:text-lg ">Thursday-Saturday: 11am-9pm</p>
-          </div>
-          <div class="border-b-2 border-[#c9a581]"></div>
-          <div class="f-2 md:border-r-2 md:pr-28 md:border-[#c9a581]">
-          <h2 class="text-xl font-serif mt-6 mb-4 md:text-2xl md:mt-0">Dinner</h2>
+          <p class="mb-10 font-serif md:text-lg ">Thursday-Saturday: 11am-9pm</p>
+        </div>
+        <div class="border-b-2 border-[#c9a581]"></div>
+        <div class="f-2 md:border-r-2 md:pr-28 md:border-[#c9a581]">
+          <h2 class="mt-6 mb-4 font-serif text-xl md:text-2xl md:mt-0">Dinner</h2>
           <p class="font-serif md:text-lg">Dinner Monday-Sunday</p>
-          <p class="font-serif mb-10 md:text-lg">7pm - 11pm</p>
-          </div>
-          <div class="border-b-2 border-[#c9a581]"></div>
-          <div class="f-3">
-          <h1 class="text-xl font-serif mt-24 mb-4 md:text-2xl md:mt-0">BUFFET</h1>
+          <p class="mb-10 font-serif md:text-lg">7pm - 11pm</p>
+        </div>
+        <div class="border-b-2 border-[#c9a581]"></div>
+        <div class="f-3">
+          <h1 class="mt-24 mb-4 font-serif text-xl md:text-2xl md:mt-0">BUFFET</h1>
           <p class="font-serif mb-14 md:text-lg">Lunch & Dinner Monday-Sunday</p>
-          </div>
-          <div class="border-b-2 border-[#c9a581]"></div>
         </div>
-        <div class="l ">
-          <img src="./image/logo.png" alt="" class="w-40 mx-auto mt-6 mb-6 md:w-56">
-          <div class="md:border-b-2 border-[#c9a581]"></div>
-          <p class="font-serif mt-16 mb-16">Copyright © 2025. SAVORIQ Resturant</p>
-        </div>
-  </div>
-</footer>
+        <div class="border-b-2 border-[#c9a581]"></div>
+      </div>
+      <div class="l ">
+        <img src="./image/logo.png" alt="" class="w-40 mx-auto mt-6 mb-6 md:w-56">
+        <div class="md:border-b-2 border-[#c9a581]"></div>
+        <p class="mt-16 mb-16 font-serif">Copyright © 2025. SAVORIQ Resturant</p>
+      </div>
+    </div>
+  </footer>
 
 
 
@@ -285,6 +265,7 @@
 
 
 
-     <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/main.js"></script>
 </body>
+
 </html>

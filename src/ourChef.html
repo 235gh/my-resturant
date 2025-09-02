@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+  <header class="relative py-4 pb-56 main-header p-30 md:flex md:flex-col md:items-center md:p-28 md:pt-10 md:h-screen">
+    <div
+      class="flex justify-between md:flex md:justify-between md:items-center md:w-full lg:flex-col lg:justify-around">
+      <!-- Logo -->
+      <img src="./image/logo.png" alt="Logo" class="md:mb-3 md:mt-0 w-52 md:w-60" />
+      <nav class="relative w-full md:mb-2">
+        <!-- Checkbox toggle -->
+        <input type="checkbox" id="menu" class="hidden peer" title="navigation Toggle" />
+
+        <!-- Hamburger / X icon -->
+        <label for="menu"
+          class="absolute z-50 flex flex-col items-center justify-center w-8 h-8 cursor-pointer top-4 right-4 md:hidden">
+          <!-- Hamburger bars -->
+          <div
+            class="w-6 h-0.5 bg-white transition-all duration-300 peer-checked:rotate-45 peer-checked:translate-y-1.5">
+          </div>
+          <div class="w-6 h-0.5 bg-white my-1 transition-all duration-300 peer-checked:opacity-0"></div>
+          <div
+            class="w-6 h-0.5 bg-white transition-all duration-300 peer-checked:-rotate-45 peer-checked:-translate-y-1.5">
+          </div>
+        </label>
+
+        <!-- Menu -->
+        <ul
+          class="hidden flex-col font-bold text-black bg-[#0e1730] text-white p-6 space-y-4 
+                    peer-checked:flex
+                    md:flex md:flex-row md:space-y-0 md:space-x-6 md:justify-center md:gap-11 md:bg-transparent md:text-white md:p-0">
+          <!-- Mobile logo -->
+          <div class="md:hidden">
+            <img src="./image/logo.png" alt="Logo" class="mb-2 w-52" />
+          </div>
+
+          <li><a href="#" class="px-2 py-2 hover:text-slate-400">Our Chefs</a></li>
+          <li><a href="../index.html" class="px-2 py-2 hover:text-slate-400">HomePage</a></li>
+          <li><a href="./menu.html" class="px-2 py-2 hover:text-slate-400">Menu</a></li>
+
+          <!-- Dropdown -->
+          <li class="relative group">
+            <button id="pages-toggle"
+              class="flex items-center justify-between w-full px-2 py-2 hover:text-slate-400 md:cursor-default">
+              Page
+              <i class="ml-1 text-xs fa-solid fa-chevron-down"></i>
+            </button>
+
+            <ul id="pages-dropdown"
+              class="absolute left-0 z-10 hidden w-40 text-black bg-white rounded-md shadow-xl top-full md:group-hover:block">
+              <li><a href="/src/about.html" class="block px-4 py-2 hover:bg-slate-100">About Us</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Our Chefs</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Login</a></li>
+              <li><a href="#" class="block px-4 py-2 hover:bg-slate-100">Sign Up</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#" class="px-2 py-2 hover:text-slate-400">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <section>
+      <h4 class="text-4xl text-center text-white font-san mt-7 md:text-8xl md:mt-40">Our Chefs</h4>
+    </section>
+  </header>
+  
+  <section class="py-16 bg-gray-100">
+    <div class="px-4 mx-auto max-w-7xl">
+      <h2 class="mb-12 text-3xl font-bold text-center">Our Chefs</h2>
+
+      <!-- Grid -->
+      <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+        <!-- Card 1 -->
+        <div class="relative group" data-aos="fade-up" data-aos-duration="800">
+          <img src="./image/1-1.jpg" alt="Chef 1" class="object-cover w-full rounded-lg shadow-md h-80">
+
+          <!-- Social icons -->
+          <div
+            class="absolute inset-0 flex items-center justify-center space-x-4 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <a href="#" class="p-3 text-white transition bg-blue-600 rounded-full hover:bg-blue-700"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="p-3 text-white transition rounded-full bg-sky-500 hover:bg-sky-600"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="p-3 text-white transition bg-pink-500 rounded-full hover:bg-pink-600"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+
+          <!-- Text -->
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold">Lionar Tom</h3>
+            <p class="text-sm text-gray-600">Head Chef</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="relative group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <img src="./image/2.jpg" alt="Chef 2" class="object-cover w-full rounded-lg shadow-md h-80">
+          <div
+            class="absolute inset-0 flex items-center justify-center space-x-4 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <a href="#" class="p-3 text-white transition bg-blue-600 rounded-full hover:bg-blue-700"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="p-3 text-white transition rounded-full bg-sky-500 hover:bg-sky-600"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="p-3 text-white transition bg-pink-500 rounded-full hover:bg-pink-600"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold">Mendia Juxef</h3>
+            <p class="text-sm text-gray-600">Sous Chef</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="relative group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <img src="./image/3.jpg" alt="Chef 3" class="object-cover w-full rounded-lg shadow-md h-80">
+          <div
+            class="absolute inset-0 flex items-center justify-center space-x-4 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <a href="#" class="p-3 text-white transition bg-blue-600 rounded-full hover:bg-blue-700"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="p-3 text-white transition rounded-full bg-sky-500 hover:bg-sky-600"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="p-3 text-white transition bg-pink-500 rounded-full hover:bg-pink-600"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold">Alexander Petllo</h3>
+            <p class="text-sm text-gray-600">Pastry Chef</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="relative group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <img src="./image/4-1.jpg" alt="Chef 4" class="object-cover w-full rounded-lg shadow-md h-80">
+          <div
+            class="absolute inset-0 flex items-center justify-center space-x-4 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <a href="#" class="p-3 text-white transition bg-blue-600 rounded-full hover:bg-blue-700"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="p-3 text-white transition rounded-full bg-sky-500 hover:bg-sky-600"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="p-3 text-white transition bg-pink-500 rounded-full hover:bg-pink-600"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold">Mendia Juxef</h3>
+            <p class="text-sm text-gray-600">Grill Master</p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="relative group" data-aos="fade-up" data-aos-duration="800">
+          <img src="./image/Unconfirmed 327570.crdownload" alt="Chef 5"
+            class="object-cover w-full rounded-lg shadow-md h-80">
+          <div
+            class="absolute inset-0 flex items-center justify-center space-x-4 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <a href="#" class="p-3 text-white transition bg-blue-600 rounded-full hover:bg-blue-700"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="p-3 text-white transition rounded-full bg-sky-500 hover:bg-sky-600"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="p-3 text-white transition bg-pink-500 rounded-full hover:bg-pink-600"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold">Petro William</h3>
+            <p class="text-sm text-gray-600">Chef de Partie</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div class="relative group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+          <img src="./image/Unconfirmed 427897.crdownload" alt="Chef 6"
+            class="object-cover w-full rounded-lg shadow-md h-80">
+          <div
+            class="absolute inset-0 flex items-center justify-center space-x-4 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <a href="#" class="p-3 text-white transition bg-blue-600 rounded-full hover:bg-blue-700"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="p-3 text-white transition rounded-full bg-sky-500 hover:bg-sky-600"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="p-3 text-white transition bg-pink-500 rounded-full hover:bg-pink-600"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold">Cathrine Nate</h3>
+            <p class="text-sm text-gray-600">Kitchen Supervisor</p>
+          </div>
+        </div>
+
+        <!-- Card 7 -->
+        <div class="relative group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+          <img src="./image/Unconfirmed 442902.crdownload" alt="Chef 7"
+            class="object-cover w-full rounded-lg shadow-md h-80">
+          <div
+            class="absolute inset-0 flex items-center justify-center space-x-4 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <a href="#" class="p-3 text-white transition bg-blue-600 rounded-full hover:bg-blue-700"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="p-3 text-white transition rounded-full bg-sky-500 hover:bg-sky-600"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="p-3 text-white transition bg-pink-500 rounded-full hover:bg-pink-600"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold">Nafiza Haq</h3>
+            <p class="text-sm text-gray-600">Line Cook</p>
+          </div>
+        </div>
+
+        <!-- Card 8 -->
+        <div class="relative group" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+          <img src="./image/Unconfirmed 802641.crdownload" alt="Chef 8"
+            class="object-cover w-full rounded-lg shadow-md h-80">
+          <div
+            class="absolute inset-0 flex items-center justify-center space-x-4 transition-all duration-500 translate-y-6 opacity-0 group-hover:opacity-100 group-hover:translate-y-0">
+            <a href="#" class="p-4 text-white transition bg-blue-600 rounded-full hover:bg-blue-700"><i
+                class="fab fa-facebook-f"></i></a>
+            <a href="#" class="p-3 text-white transition rounded-full bg-sky-500 hover:bg-sky-600"><i
+                class="fab fa-twitter"></i></a>
+            <a href="#" class="p-3 text-white transition bg-pink-500 rounded-full hover:bg-pink-600"><i
+                class="fab fa-instagram"></i></a>
+          </div>
+          <div class="mt-4 text-center">
+            <h3 class="text-lg font-bold">Alextra Nondi</h3>
+            <p class="text-sm text-gray-600">Junior Chef</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script type="module" src="/src/main.js"></script>
+</body>
+
+</html>
